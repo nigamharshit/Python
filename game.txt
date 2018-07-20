@@ -1,0 +1,58 @@
+Python 3.5.0 (v3.5.0:374f501f4567, Sep 13 2015, 02:27:37) [MSC v.1900 64 bit (AMD64)] on win32
+Type "copyright", "credits" or "license()" for more information.
+>>> def game():
+	from random import randint
+	player=input('Rock(r),Paper(p) or Sissors(s)')
+	print(player,'Vs')
+	chosen=randint(1,3)
+	print(chosen)
+	if chosen==1:
+		computer='r'
+	elif chosen==2:
+		computer='p'
+	else:
+		computer='s'
+	print(computer)
+	print(player,'Vs',end=' ')
+	chosen=randint(1,3)
+	print(computer)
+	if player==computer:
+		print('DRAW!')
+	elif player=='r' and computer=='s':
+		print('Player Wins!')
+	elif player=='r' and computer=='p':
+		print('Computer Wins!')
+	elif player=='p' and computer=='r':
+		print('Player Wins!')
+	elif player=='p' and computer=='s':
+		print('Computer Wins!')
+	elif player=='s' and computer=='r':
+		print('Computer Wins!')
+	elif player=='s' and computer=='p':
+		print('Player Wins')
+
+		
+>>> game()
+Rock(r),Paper(p) or Sissors(s)s
+s Vs
+3
+s
+s Vs s
+DRAW!
+>>> 
+>>> 
+>>> game()
+Rock(r),Paper(p) or Sissors(s)p
+p Vs
+3
+s
+p Vs s
+Computer Wins!
+>>> game()
+Rock(r),Paper(p) or Sissors(s)r
+r Vs
+3
+s
+r Vs s
+Player Wins!
+>>> 
